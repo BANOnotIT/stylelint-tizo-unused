@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - '8'
+
+script:
+  - npm run lint
+
+deploy:
+  provider: npm
+  email: bano.notit@gmail.com
+  api_key:
+    secure: jB9vbxK0ZP8aiXOyamsODsCVSH4RxuVLcUsoNJlHqUqBcge2GVpGP2rBFplODFjcX/jTm+IiXG7/abVpzbtqb5JIokfz+ss2NGiZHwvDSS3j2RTusPcXTORqsODvB1mDjQpJKMw6mhgvt+qB6EaVnub93g+7PyRsFx/gICB9NoYvD1odMybvmA8ZAceYwI/ZetrXrQu8PWUNeGzKTTQV6rXx9Ra6XOAR0zYaJ0dOw2KOIV4jXm0ZFfZnmLxUwdlSHI3uWKp7E6No2l0AJw3i8VKr4rw7Ryr1Ff+bNiO7Jx6kilW6XriIyUC494D4CDGM03oiGFY4W5hRpqP8TSlKAbsNr2hoYHZuMb9NrvqQK5u9X/NDqmFi0Ahu7gJYHECcPCnOUE1r7Lh6rcxiYq30ezp4vlwxDCU5Q07U+XKmsO/pgoGnmrXm9dca90PTs/4m6MNa6VtU8apo8aP903vWOwCMD9tD49qIFQcue49JCDJENr+NRobCBJqgB11rWa7EozbWMrcwY7K/xOadSnzJvReGaNMKHml3Ve7YqxRA6gZiTr2wLu9bmq09rEUzskB3qmWJHRtJX2FnJVucgVI4YnKopr2rDfGjToz1Y+FjvqULtzyKC1MJyxjcysFQTQUJ4SWBWjasBRsSWsroweyVmEdIE5+lBcIruR9xCXKDoOA=
+  on:
+    tags: true
+    repo: BANOnotIT/stylelint-tizo-unused
