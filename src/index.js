@@ -4,7 +4,6 @@
  */
 
 const stylelint = require('stylelint')
-const fs = require('fs')
 const resolveSelector = require('postcss-resolve-nested-selector')
 const isValidGlob = require('is-valid-glob')
 const isAbsoluteUrl = require('is-absolute-url')
@@ -85,6 +84,7 @@ module.exports = stylelint.createPlugin(ruleName, function (options: Options) {
                 })
             })
             .catch(err => {
+                // eslint-disable-next-line no-console
                 console.log(err)
             })
 
