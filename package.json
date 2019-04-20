@@ -1,0 +1,47 @@
+{
+  "name": "stylelint-tizo-unused",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "prepublishOnly": "babel -d dist src",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix"
+  },
+  "keywords": [
+    "tizo",
+    "unused",
+    "selectors",
+    "query",
+    "css"
+  ],
+  "files": [
+    "dist"
+  ],
+  "author": "BANO.notIT <bano.notit@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "glob": "^7.1.3",
+    "is-absolute-url": "^3.0.0",
+    "is-valid-glob": "^1.0.0",
+    "jsdom": "^11.12.0",
+    "postcss-resolve-nested-selector": "^0.1.1",
+    "postcss-selector-parser": "latest",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/preset-flow": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
+    "eslint": "^5.16.0",
+    "eslint-plugin-flowtype": "^3.6.1",
+    "flow-bin": "^0.97.0",
+    "stylelint": "^10.0.1",
+    "webpack": "^4.30.0"
+  },
+  "peerDependencies": {
+    "stylelint": "^10.0.1"
+  }
+}
