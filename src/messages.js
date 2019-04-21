@@ -10,5 +10,8 @@ module.exports = {
     },
     pageReadFail(page: string, error: Error) {
         return `Error while reading '${page}':\n${error.toString()}`
+    },
+    fileNotFound(page: string) {
+        return `Can't find any files for glob '${page}'`
     }
 }

@@ -7,15 +7,19 @@ const jsdom = require('jsdom')
 const fs = require('fs')
 const request = require('request')
 const messages = require('./messages')
-const isGlob = require('is-valid-glob')
+const isAbsoluteUrl = require('is-absolute-url')
 const glob = require('glob')
 
 module.exports = (page: string): Promise<Document> => new Promise(
     (done, fail) => {
-        if (isGlob(page)) {
+        if (!isAbsoluteUrl(page)) {
             glob(page, (err, files) => {
                 if (err) {
                     return fail(messages.pageReadFail(page, err))
+                }
+
+                if (!files) {
+                    return fail(messages.fileNotFound(page))
                 }
 
                 files.forEach(file =>

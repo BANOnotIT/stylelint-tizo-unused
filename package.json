@@ -32,10 +32,10 @@
     "jsdom": "^11.12.0",
     "postcss-resolve-nested-selector": "^0.1.1",
     "postcss-selector-parser": "latest",
+    "@babel/cli": "^7.4.3",
     "request": "^2.88.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.4.3",
     "@babel/preset-flow": "^7.0.0",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
