@@ -73,9 +73,10 @@ module.exports = stylelint.createPlugin(ruleName, function (options: Options) {
                                 selector => {
                                     if (!pagesContainSelector(pages, selector)) {
                                         stylelint.utils.report({
-                                            node: rule,
                                             message: messages.unused(selector),
-                                            result
+                                            node: rule,
+                                            result,
+                                            ruleName
                                         })
                                     }
                                 }
