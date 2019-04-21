@@ -27,7 +27,11 @@ module.exports = (page: string): Promise<Document> => new Promise(
                         if (err) {
                             return fail(messages.pageReadFail(page, err))
                         }
-                        done(new jsdom.JSDOM(content))
+                        done(
+                            new jsdom.JSDOM(content.toString('utf8'))
+                                .window
+                                .document
+                        )
                     })
                 )
             })
@@ -39,7 +43,7 @@ module.exports = (page: string): Promise<Document> => new Promise(
                 if (res.statusCode !== 200) {
                     return fail(messages.pageBadStatus(page, res.statusCode))
                 }
-                return done((new jsdom.JSDOM(content)).window.document)
+                done((new jsdom.JSDOM(content)).window.document)
             })
         }
     }
